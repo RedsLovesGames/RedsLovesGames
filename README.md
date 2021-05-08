@@ -5,10 +5,6 @@
 
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=redslovesgames-ma&rank=S,AAA,AA,A,SS" alt="redslovesgames" /></a> </p>
 
-
-
-
-
 - 🔭 I’m currently working on my two latest repos [discord token gen and checker/plugins](https://github.com/RedsLovesGames/Nitro-gen-checker-and-sniper)
 
 - 🌱 I’m currently learning **a few coding languages and im improving my skills in general**
