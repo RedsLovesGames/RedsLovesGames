@@ -1,9 +1,13 @@
 <h1 align="center">Hi 👋, I'm RedsLovesGames</h1>
 <h3 align="center">Im a teenager who does coding stuff</h3>
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=redslovesgames&label=Profile%20views&color=0e75b6&style=flat" alt="redslovesgames" /> </p>
+<p align="left"> <img src="https://komarev.com/ghpvc/?username=redslovesgames&label=Profile%20views&color=0e75b6&style=darkhub" alt="redslovesgames" /> </p>
 
-<p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=redslovesgames" alt="redslovesgames" /></a> </p>
+<p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=redslovesgames-ma&rank=S,AAA,AA,A,SS" alt="redslovesgames" /></a> </p>
+
+
+
+
 
 - 🔭 I’m currently working on my two latest repos [discord token gen and checker/plugins](https://github.com/RedsLovesGames/Nitro-gen-checker-and-sniper)
 
