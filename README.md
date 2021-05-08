@@ -3,7 +3,7 @@
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=redslovesgames&label=Profile%20views&color=0e75b6&style=flat" alt="redslovesgames" /> </p>
 
-<p align="left"> <a href="https://github-profile-trophy.vercel.app/?username=ryo-ma&rank=SSS"><img src="https://github-profile-trophy.vercel.app/?username=redslovesgames" alt="redslovesgames" /></a> </p>
+<p align="left"> <a href="https://github-profile-trophy.vercel.app/?username=ryo-ma&rank=SSS"><img src="https://github-profile-trophy.vercel.app/?username=ryo-ma&rank=SSS" alt="redslovesgames" /></a> </p>
 
 - 🔭 I’m currently working on my two latest repos [discord nitro gen and checker/plugins](https://github.com/RedsLovesGames/Nitro-gen-checker-and-sniper)
 
