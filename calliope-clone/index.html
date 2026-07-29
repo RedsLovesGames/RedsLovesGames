@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="A responsive baby-name profile demo inspired by modern editorial data tools." />
+  <title>Calliope name profile | Name Scout</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="announcement">Real birth data, translated into everyday odds.</div>
+
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="#top" aria-label="Name Scout home">
+        <span class="brand-mark" aria-hidden="true">✦</span>
+        <span>Name Scout</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a href="#profile">Baby names</a>
+        <a href="#alternatives">Name lab</a>
+        <button class="nav-button" type="button" id="toolsButton" aria-expanded="false">More tools <span>⌄</span></button>
+        <div class="tools-menu" id="toolsMenu" hidden>
+          <a href="#chart">Names by year</a>
+          <a href="#harmony">Full name tester</a>
+          <a href="#clash">Classroom odds</a>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-button" id="openSearch" type="button" aria-label="Open search">⌕</button>
+        <button class="shortlist-button" id="openShortlist" type="button">
+          <span>♡</span> Shortlist <b id="shortlistCount">0</b>
+        </button>
+        <button class="mobile-menu-button" id="mobileMenuButton" aria-label="Toggle menu" aria-expanded="false">☰</button>
+      </div>
+    </div>
+
+    <div class="mobile-nav" id="mobileNav" hidden>
+      <a href="#profile">Baby names</a>
+      <a href="#alternatives">Name lab</a>
+      <a href="#chart">Names by year</a>
+      <a href="#harmony">Full name tester</a>
+    </div>
+  </header>
+
+  <div class="search-panel" id="searchPanel" hidden>
+    <div class="shell search-panel-inner">
+      <label for="siteSearch">Explore a name</label>
+      <div class="search-row">
+        <input id="siteSearch" type="search" placeholder="Search for a name…" autocomplete="off" />
+        <select id="countrySelect" aria-label="Country">
+          <option value="us">🇺🇸 US</option>
+          <option value="uk">🇬🇧 UK</option>
+          <option value="au">🇦🇺 AU</option>
+        </select>
+        <button class="primary-button" id="searchSubmit" type="button">Explore</button>
+        <button class="close-button" id="closeSearch" type="button" aria-label="Close search">×</button>
+      </div>
+      <p class="search-feedback" id="searchFeedback"></p>
+    </div>
+  </div>
+
+  <main id="top">
+    <section class="profile-hero" id="profile">
+      <div class="hero-orb orb-one"></div>
+      <div class="hero-orb orb-two"></div>
+      <div class="shell">
+        <div class="breadcrumbs"><a href="#">Names</a><span>/</span><span>Calliope</span></div>
+
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <div class="eyebrow"><span class="status-dot"></span> Girl name · Greek origin</div>
+            <h1>Calliope</h1>
+            <p class="pronunciation">kuh-LYE-uh-pee <button class="sound-button" id="pronounceButton" type="button" aria-label="Hear pronunciation">◖))</button></p>
+            <p class="hero-summary">A lyrical, mythic name with a distinctive sound and a surprisingly low chance of duplication at school.</p>
+
+            <div class="hero-actions-row">
+              <button class="primary-button heart-action" id="saveCalliope" type="button"><span>♡</span> Add to shortlist</button>
+              <button class="secondary-button" id="shareButton" type="button">Share profile</button>
+              <button class="ghost-button" id="compareFocus" type="button">Compare</button>
+            </div>
+          </div>
+
+          <div class="meaning-card">
+            <div class="quote-mark">“</div>
+            <p>Beautiful voice</p>
+            <span>In Greek mythology, Calliope is the muse associated with epic poetry.</span>
+            <div class="meaning-tags">
+              <button type="button">Mythic</button>
+              <button type="button">Musical</button>
+              <button type="button">Rare</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="stats-grid">
+          <article class="stat-card">
+            <span class="stat-label">Current US rank</span>
+            <strong>#425</strong>
+            <span class="trend up">↗ rising</span>
+          </article>
+          <article class="stat-card">
+            <span class="stat-label">Registered in 2025</span>
+            <strong>682</strong>
+            <span>babies</span>
+          </article>
+          <article class="stat-card">
+            <span class="stat-label">Classroom clash</span>
+            <strong>0.6%</strong>
+            <span>in a class of 30</span>
+          </article>
+          <article class="stat-card stat-highlight">
+            <span class="stat-label">Rarity snapshot</span>
+            <strong>1 in 4,861</strong>
+            <span>US births</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shell" id="chart">
+      <div class="section-heading split-heading">
+        <div>
+          <span class="kicker">Popularity over time</span>
+          <h2>A quiet climb</h2>
+          <p>Calliope has moved from the edge of the rankings into a more recognizable, still uncommon range.</p>
+        </div>
+        <div class="data-source">SSA · 2014–2025</div>
+      </div>
+
+      <div class="chart-card">
+        <div class="chart-toolbar">
+          <div class="segmented" role="group" aria-label="Chart metric">
+            <button class="active" data-metric="births" type="button">Births</button>
+            <button data-metric="rank" type="button">Rank</button>
+          </div>
+          <div class="compare-control">
+            <input id="compareInput" type="text" placeholder="Compare another name" />
+            <button id="addComparison" type="button">Add</button>
+          </div>
+        </div>
+        <div class="chart-wrap">
+          <svg id="popularityChart" viewBox="0 0 920 360" role="img" aria-label="Calliope popularity chart"></svg>
+          <div class="chart-tooltip" id="chartTooltip" hidden></div>
+        </div>
+        <div class="chart-legend" id="chartLegend">
+          <span><i class="legend-calliope"></i>Calliope</span>
+        </div>
+      </div>
+
+      <div class="insight-grid">
+        <article>
+          <span>2024</span>
+          <strong>614</strong>
+          <small>registrations</small>
+        </article>
+        <article>
+          <span>2025</span>
+          <strong>682</strong>
+          <small>registrations</small>
+        </article>
+        <article class="positive">
+          <span>Year over year</span>
+          <strong>+11%</strong>
+          <small>68 more babies</small>
+        </article>
+      </div>
+    </section>
+
+    <section class="section tinted-section">
+      <div class="shell editorial-grid">
+        <div>
+          <span class="kicker">Put the numbers in context</span>
+          <h2>Distinctive, without feeling invented</h2>
+        </div>
+        <div class="editorial-copy">
+          <p>At the current rate, you would expect to encounter roughly one Calliope for every 101 school buses filled with children.</p>
+          <p>It sits close to Holland and Alyssa in the US rankings, while the alternate spelling Kalliope adds a small neighboring group.</p>
+          <a href="#clash">See the classroom calculation <span>→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shell feature-grid" id="clash">
+      <article class="feature-card calculator-card">
+        <div class="feature-icon">30</div>
+        <span class="kicker">Classroom clash calculator</span>
+        <h2>Will there be another Calliope?</h2>
+        <p>Adjust the group size to see the estimated probability that at least one other child has the same name.</p>
+
+        <div class="range-labels"><span>Class size</span><strong id="classSizeValue">30</strong></div>
+        <input id="classSizeSlider" type="range" min="2" max="1000" value="30" />
+        <div class="range-extremes"><span>2</span><span>1,000</span></div>
+
+        <div class="odds-display">
+          <strong id="clashOdds">0.6%</strong>
+          <span id="clashText">chance of another Calliope in a class of 30</span>
+        </div>
+      </article>
+
+      <article class="feature-card perception-card">
+        <div class="feature-icon">✦</div>
+        <span class="kicker">Name perception</span>
+        <h2>How the name feels</h2>
+        <p>A playful perception profile based on the traits commonly associated with the name.</p>
+        <div class="trait-list">
+          <div><span>Creative</span><div class="bar"><i style="width:92%"></i></div><b>92</b></div>
+          <div><span>Elegant</span><div class="bar"><i style="width:84%"></i></div><b>84</b></div>
+          <div><span>Adventurous</span><div class="bar"><i style="width:76%"></i></div><b>76</b></div>
+          <div><span>Familiar</span><div class="bar"><i style="width:46%"></i></div><b>46</b></div>
+        </div>
+      </article>
+    </section>
+
+    <section class="section shell" id="harmony">
+      <div class="harmony-card">
+        <div class="harmony-copy">
+          <span class="kicker">Full name test</span>
+          <h2>Try the complete name out loud</h2>
+          <p>Check rhythm, initials, syllable balance, and repeated sounds before you commit.</p>
+        </div>
+        <form class="harmony-form" id="harmonyForm">
+          <label>First name<input id="firstName" value="Calliope" required /></label>
+          <label>Middle name<input id="middleName" placeholder="Optional" /></label>
+          <label>Last name<input id="lastName" placeholder="Last name" required /></label>
+          <button class="primary-button" type="submit">Check harmony</button>
+        </form>
+        <div class="harmony-result" id="harmonyResult" hidden></div>
+      </div>
+    </section>
+
+    <section class="section playground-section">
+      <div class="shell playground-grid">
+        <div class="playground-card">
+          <span class="kicker">The playground test</span>
+          <h2>What might people actually call her?</h2>
+          <div class="nickname-cloud">
+            <span class="large">Callie</span>
+            <span>Cali</span>
+            <span class="medium">Lio</span>
+            <span>Poppy</span>
+            <span class="medium">Calla</span>
+            <span>Kiki</span>
+          </div>
+        </div>
+        <div class="playground-notes">
+          <div><b>Easy nickname</b><p>Callie gives the formal name an accessible everyday option.</p></div>
+          <div><b>Pronunciation watch</b><p>Some people may ask whether you use “kuh-LYE-uh-pee” or the Greek-influenced pronunciation.</p></div>
+          <div><b>Initial check</b><p>Use the full-name tester to catch accidental initials and repeated syllables.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shell" id="alternatives">
+      <div class="section-heading split-heading">
+        <div>
+          <span class="kicker">Similar names</span>
+          <h2>Names with the same energy</h2>
+          <p>Mythic, lyrical, uncommon, and established enough to feel wearable.</p>
+        </div>
+        <div class="filter-chips" id="filterChips">
+          <button class="active" data-filter="all" type="button">All</button>
+          <button data-filter="mythic" type="button">Mythic</button>
+          <button data-filter="literary" type="button">Literary</button>
+          <button data-filter="rare" type="button">Rare</button>
+        </div>
+      </div>
+
+      <div class="name-grid" id="nameGrid">
+        <article class="name-card" data-tags="mythic rare"><button class="mini-heart" type="button" aria-label="Save Persephone">♡</button><span>#741</span><h3>Persephone</h3><p>Mythic · Dramatic · Rare</p></article>
+        <article class="name-card" data-tags="mythic literary"><button class="mini-heart" type="button" aria-label="Save Athena">♡</button><span>#101</span><h3>Athena</h3><p>Mythic · Strong · Bright</p></article>
+        <article class="name-card" data-tags="literary rare"><button class="mini-heart" type="button" aria-label="Save Isadora">♡</button><span>#1,288</span><h3>Isadora</h3><p>Literary · Elegant · Rare</p></article>
+        <article class="name-card" data-tags="mythic"><button class="mini-heart" type="button" aria-label="Save Daphne">♡</button><span>#221</span><h3>Daphne</h3><p>Mythic · Botanical · Vintage</p></article>
+        <article class="name-card" data-tags="literary"><button class="mini-heart" type="button" aria-label="Save Ophelia">♡</button><span>#267</span><h3>Ophelia</h3><p>Literary · Romantic · Lyrical</p></article>
+        <article class="name-card" data-tags="rare mythic"><button class="mini-heart" type="button" aria-label="Save Cassiopeia">♡</button><span>#4,900+</span><h3>Cassiopeia</h3><p>Mythic · Celestial · Very rare</p></article>
+        <article class="name-card" data-tags="literary rare"><button class="mini-heart" type="button" aria-label="Save Cressida">♡</button><span>#5,000+</span><h3>Cressida</h3><p>Literary · Polished · Rare</p></article>
+        <article class="name-card" data-tags="mythic literary"><button class="mini-heart" type="button" aria-label="Save Lyra">♡</button><span>#481</span><h3>Lyra</h3><p>Celestial · Literary · Musical</p></article>
+      </div>
+    </section>
+
+    <section class="section shortlist-section">
+      <div class="shell shortlist-promo">
+        <div>
+          <span class="kicker">Your shortlist</span>
+          <h2>Keep the names worth revisiting</h2>
+          <p>Save favorites, compare them side by side, and share the list with someone else.</p>
+        </div>
+        <button class="primary-button" id="promoOpenShortlist" type="button">Open shortlist <span>→</span></button>
+      </div>
+    </section>
+
+    <section class="section shell about-section">
+      <div>
+        <span class="kicker">About this demo</span>
+        <h2>A clean-room recreation of a modern baby-name profile</h2>
+      </div>
+      <div>
+        <p>This standalone page mirrors the referenced site’s information architecture and interactive feel, while using original branding, rewritten copy, and independently authored code.</p>
+        <p>The Calliope figures shown here are presented as a demonstration and cite US Social Security Administration data for 2025.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div><a class="brand footer-brand" href="#top"><span class="brand-mark">✦</span>Name Scout</a><p>Thoughtful names, understood through real-world context.</p></div>
+      <div><b>Explore</b><a href="#profile">Name profile</a><a href="#chart">Popularity</a><a href="#alternatives">Alternatives</a></div>
+      <div><b>Tools</b><a href="#clash">Classroom odds</a><a href="#harmony">Full-name test</a><a href="#alternatives">Name lab</a></div>
+      <div><b>Details</b><a href="#">Privacy</a><a href="#">Terms</a><a href="mailto:hello@example.com">Contact</a></div>
+    </div>
+    <div class="shell footer-bottom"><span>© 2026 Name Scout demo</span><span>Built as an editable static webpage.</span></div>
+  </footer>
+
+  <aside class="shortlist-drawer" id="shortlistDrawer" aria-hidden="true">
+    <div class="drawer-header"><div><span class="kicker">Saved names</span><h2>Your shortlist</h2></div><button id="closeShortlist" type="button" aria-label="Close shortlist">×</button></div>
+    <div class="drawer-content" id="shortlistItems"><p class="empty-state">Tap a heart to save a name.</p></div>
+    <div class="drawer-footer"><button class="secondary-button" id="clearShortlist" type="button">Clear list</button><button class="primary-button" id="copyShortlist" type="button">Copy names</button></div>
+  </aside>
+  <div class="scrim" id="scrim" hidden></div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
